@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Налаштування системи</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="img/favicon/Logo.svg" alt="Logo" class="logo">
+            <div class="search">
+                <input type="text" name="" id="" class="search-input" placeholder="Пошук співробітника">
+                <img src="img/favicon/search.svg" alt="search" class="search-logo">
+            </div>
+
+            <div class="client">
+                <span class="client-name">Марія Шевченко</span>
+                <div class="client-photo"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="main-title">Налаштування системи</h2>
+            <div class="main-box">
+                <div class="left">
+                    <section class="individual criteria-box">
+                        <h3>Критерії індивідуальної оцінки</h3>
+                        <ul class="individual-criteria-list criteria-list">
+                            <li class="criteria">
+                                <span class="criteria-name">Відсоток виконання продаж</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість відрацьованих годин</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Успішність продажів</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість залучених клієнтів</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість укладених угод</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <span class="active">Активні критерії: відсоток виконання продаж</span>
+                    </section>
+                    <section class="group criteria-box">
+                        <h3>Критерії групової оцінки</h3>
+                        <ul class="group-criteria-list criteria-list">
+                            <li class="criteria">
+                                <span class="criteria-name">Відсоток виконання продаж</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість відрацьованих годин</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Успішність продажів</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість залучених клієнтів</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="criteria">
+                                <span class="criteria-name">Кількість укладених угод</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <span class="active">Активні критерії: відсоток виконання продаж</span>
+                    </section>
+                </div>
+                <div class="right">
+                    <section class="options">
+                        <h3 class=title>Розрахунок оцінки</h3>
+                        <form class="form">
+                            <div class="criteria-titles"><span>Критерій</span><span>Позначення</span></div>
+                            <ul class="group-criteria-list criteria-list">
+                                <li class="criteria">
+                                    <span class="criteria-name">Відсоток виконання продаж</span>
+                                    <input type="text" class="criteria-abbreviation">
+                                </li>
+                                <li class="criteria">
+                                    <span class="criteria-name">Кількість відрацьованих годин</span>
+                                    <input type="text" class="criteria-abbreviation">
+                                </li>
+                                <li class="criteria">
+                                    <span class="criteria-name">Успішність продажів</span>
+                                    <input type="text" class="criteria-abbreviation">
+                                </li>
+                                <li class="criteria">
+                                    <span class="criteria-name">Кількість залучених клієнтів</span>
+                                    <input type="text" class="criteria-abbreviation">
+                                </li>
+                                <li class="criteria">
+                                    <span class="criteria-name">Кількість укладених угод</span>
+                                    <input type="text" class="criteria-abbreviation">
+                                </li>
+                            </ul>
+                            <div class="formula">
+                                <h4 class="formula-title">Формула індивідуальної оцінки</h4>
+                                <input type="text" class="formula-calculation">
+                            </div>
+                            <div class="formula">
+                                <h4 class="formula-title">Формула групової оцінки</h4>
+                                <input type="text" class="formula-calculation">
+                            </div>
+                            <input type="submit" id="submit" value="Підтвердити">
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="https://credit-agricole.ua/">Офіційний сайт</a>
+            <div class="social">
+                <a href=""><img src="img/favicon/inst.svg" alt="Inst"></a>
+                <a href=""><img src="img/favicon/fb.svg" alt="FB"></a>
+                <a href=""><img src="img/favicon/youTube.svg" alt="youTube"></a>
+            </div>
+            <span class="number">0 800 30 5555</span>
+        </div>
+    </footer>
+</body>
+
+</html>

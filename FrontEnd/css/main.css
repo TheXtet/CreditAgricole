@@ -98,6 +98,52 @@ body header .container .client-photo {
   background-repeat: no-repeat;
   margin-left: 15px;
 }
+body main .monitoring .admin-settings {
+  width: 100px;
+  height: 70px;
+  border: 2px solid #8CCA19;
+  border-radius: 11px;
+  position: fixed;
+  overflow: hidden;
+  margin-left: -80px;
+  margin-top: 300px;
+  transition: 1s;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+}
+body main .monitoring .admin-settings:hover {
+  margin-left: 0px;
+}
+body main .monitoring .admin-settings a {
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+}
+body main .monitoring .admin-settings a .admin-settings-img {
+  width: 100%;
+  transition: 0.5s;
+}
+body main .monitoring .admin-settings a .admin-settings-img:hover {
+  transform: scale(1.2);
+}
+body main .monitoring .admin-settings .move {
+  width: 20px;
+  height: 70px;
+  vertical-align: middle;
+  line-height: 70px;
+  font-size: 30px;
+  text-indent: 2px;
+  color: #FFF;
+  background-color: #8CCA19;
+  cursor: pointer;
+}
 body main .monitoring .container {
   padding: 35px 43px 75px;
   display: -webkit-box;

@@ -164,7 +164,8 @@ body{
             }
             .main-box{
                 width: 100%;
-                .flexbox();
+                form{
+                    .flexbox();
                 .left{
                     width: 48%;
                     .criteria-box{
@@ -176,6 +177,25 @@ body{
                             .criteria{
                                 .criteria-option(15px);
                                 .flex-options();
+                                &:hover .delete{
+                                    display:inline-block; 
+                                    cursor: pointer;
+                                }
+
+                                .delete{
+                                    width: 15px;
+                                    height: 15px;   
+                                    color:white;
+                                    border:none;
+                                    border-radius: 50px;
+                                    background-color:red;
+                                    text-align:center;
+                                    font-size:10px;
+                                    font-weight:300%;
+                                    vertical-align: middle;
+                                    line-height: 15px;
+                                    display:none;
+                                }
         
                                 .switch {
                                     position: relative;
@@ -236,11 +256,32 @@ body{
                                   }
                             }
                         }
-                        .active{
-                            display: block;
-                            margin-top: 25px;
-                            .font(normal, normal, 20px, 23px);
+
+                        .bottom{
+                            margin-top: 45px;
+                            .flex-options();
+                            .active{
+                                .font(normal, normal, 20px, 23px);
+                            }
+                            .add{
+                                display: block;
+                                width: 30px;    
+                                height: 30px;
+                                color:@main-color;
+                                border-radius: 50%;
+                                border:2px solid @main-color;
+                                text-align:center;
+                                .font(normal,normal,30px,30px);
+                                margin-right: 15px;
+
+                                &:hover{
+                                    color:@active-btn-color;
+                                    border-color: @active-btn-color;
+                                    cursor:pointer;
+                                }
+                            }
                         }
+                        
                     }
         
                     .group{
@@ -256,7 +297,7 @@ body{
                         .title{
                             .box-title();
                         }
-                        form{
+                        
                             .criteria-titles{
                                 width: 100%;
                                 .flex-options();
@@ -306,11 +347,10 @@ body{
                                 .border-option();
                                 width: 238px;
                                 height: 38px;
-                                display:inline-block;
-                                text-align:center;
-                                
+                                .flex-options();                                
                                 margin: 40px auto 0;
                                 color:@second-color;
+                                text-indent:50px;
                                 .font(normal, normal, 22px, 25px);
 
                                 &:hover{
@@ -322,8 +362,9 @@ body{
                                     box-shadow:inset 0 0 5px rgba(0,0,0,0.5);
                                 }
                             }
-                        }          
+                                  
                     } 
+                }
                 }
             }
 

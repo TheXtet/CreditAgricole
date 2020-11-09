@@ -105,7 +105,7 @@ body header .container .client-photo {
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  background-image: url(img/favicon/user.svg);
+  background-image: url(../img/favicon/user.svg);
   background-repeat: no-repeat;
   margin-left: 15px;
 }
@@ -127,16 +127,18 @@ body main .container .main-title {
 }
 body main .container .main-box {
   width: 100%;
+}
+body main .container .main-box form {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-body main .container .main-box .left {
+body main .container .main-box form .left {
   width: 48%;
 }
-body main .container .main-box .left .criteria-box {
+body main .container .main-box form .left .criteria-box {
   margin-top: 25px;
   min-width: 537px;
   min-height: 150px;
@@ -144,7 +146,7 @@ body main .container .main-box .left .criteria-box {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
 }
-body main .container .main-box .left .criteria-box h3 {
+body main .container .main-box form .left .criteria-box h3 {
   text-align: center;
   width: 100%;
   font-style: normal;
@@ -152,7 +154,7 @@ body main .container .main-box .left .criteria-box h3 {
   font-size: 25px;
   line-height: 29px;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria {
   list-style: none;
   font-style: normal;
   font-weight: normal;
@@ -171,16 +173,34 @@ body main .container .main-box .left .criteria-box .criteria-list .criteria {
   /* The slider */
   /* Rounded sliders */
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .switch {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria:hover .delete {
+  display: inline-block;
+  cursor: pointer;
+}
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .delete {
+  width: 15px;
+  height: 15px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  background-color: red;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 300%;
+  vertical-align: middle;
+  line-height: 15px;
+  display: none;
+}
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .switch input {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .switch input {
   display: none;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .slider {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -191,7 +211,7 @@ body main .container .main-box .left .criteria-box .criteria-list .criteria .sli
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .slider:before {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -202,35 +222,62 @@ body main .container .main-box .left .criteria-box .criteria-list .criteria .sli
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria input:checked + .slider {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria input:checked + .slider {
   background-color: #2196F3;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria input:focus + .slider {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria input:checked + .slider:before {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .slider.round {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .slider.round {
   border-radius: 34px;
 }
-body main .container .main-box .left .criteria-box .criteria-list .criteria .slider.round:before {
+body main .container .main-box form .left .criteria-box .criteria-list .criteria .slider.round:before {
   border-radius: 50%;
 }
-body main .container .main-box .left .criteria-box .active {
-  display: block;
-  margin-top: 25px;
+body main .container .main-box form .left .criteria-box .bottom {
+  margin-top: 45px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .container .main-box form .left .criteria-box .bottom .active {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
 }
-body main .container .main-box .left .group {
+body main .container .main-box form .left .criteria-box .bottom .add {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #8CCA19;
+  border-radius: 50%;
+  border: 2px solid #8CCA19;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  margin-right: 15px;
+}
+body main .container .main-box form .left .criteria-box .bottom .add:hover {
+  color: #2CB0CD;
+  border-color: #2CB0CD;
+  cursor: pointer;
+}
+body main .container .main-box form .left .group {
   margin-bottom: 20px;
 }
-body main .container .main-box .right {
+body main .container .main-box form .right {
   margin-top: 25px;
   min-width: 537px;
   min-height: 150px;
@@ -241,7 +288,7 @@ body main .container .main-box .right {
   margin-bottom: 20px;
   margin-left: 25px;
 }
-body main .container .main-box .right .options .title {
+body main .container .main-box form .right .options .title {
   text-align: center;
   width: 100%;
   font-style: normal;
@@ -249,7 +296,7 @@ body main .container .main-box .right .options .title {
   font-size: 25px;
   line-height: 29px;
 }
-body main .container .main-box .right .options form .criteria-titles {
+body main .container .main-box form .right .options .criteria-titles {
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -267,7 +314,7 @@ body main .container .main-box .right .options form .criteria-titles {
   padding-bottom: 15px;
   border-bottom: 1px solid #000;
 }
-body main .container .main-box .right .options form .criteria-list .criteria {
+body main .container .main-box form .right .options .criteria-list .criteria {
   list-style: none;
   font-style: normal;
   font-weight: normal;
@@ -283,7 +330,7 @@ body main .container .main-box .right .options form .criteria-list .criteria {
   justify-content: space-between;
   align-items: center;
 }
-body main .container .main-box .right .options form .criteria-list .criteria .criteria-abbreviation {
+body main .container .main-box form .right .options .criteria-list .criteria .criteria-abbreviation {
   width: 119px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
@@ -295,21 +342,21 @@ body main .container .main-box .right .options form .criteria-list .criteria .cr
   font-size: 20px;
   line-height: 24px;
 }
-body main .container .main-box .right .options form .criteria-list .criteria .criteria-abbreviation:focus {
+body main .container .main-box form .right .options .criteria-list .criteria .criteria-abbreviation:focus {
   outline: none;
 }
-body main .container .main-box .right .options form .formula {
+body main .container .main-box form .right .options .formula {
   margin-top: 25px;
   width: 100%;
 }
-body main .container .main-box .right .options form .formula-title {
+body main .container .main-box form .right .options .formula-title {
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 25px;
   color: #8CCA19;
 }
-body main .container .main-box .right .options form .formula-calculation {
+body main .container .main-box form .right .options .formula-calculation {
   width: 100%;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
@@ -322,30 +369,36 @@ body main .container .main-box .right .options form .formula-calculation {
   line-height: 24px;
   margin-top: 20px;
 }
-body main .container .main-box .right .options form .formula-calculation:focus {
+body main .container .main-box form .right .options .formula-calculation:focus {
   outline: none;
 }
-body main .container .main-box .right .options form #submit {
+body main .container .main-box form .right .options #submit {
   background-color: #8CCA19;
   border: none;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
   width: 238px;
   height: 38px;
-  display: inline-block;
-  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 40px auto 0;
   color: #FFF;
+  text-indent: 50px;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 25px;
 }
-body main .container .main-box .right .options form #submit:hover {
+body main .container .main-box form .right .options #submit:hover {
   outline: none;
   background-color: #2CB0CD;
 }
-body main .container .main-box .right .options form #submit:active {
+body main .container .main-box form .right .options #submit:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 body footer .container {

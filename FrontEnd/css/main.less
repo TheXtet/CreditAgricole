@@ -114,6 +114,54 @@ body{
 
     main{          
         .monitoring{
+
+            .admin-settings{
+                width: 100px;
+                height: 70px;
+                border:2px solid @main-color;
+                border-radius: 11px;
+                position: fixed;
+                overflow:hidden;
+                margin-left:-80px;
+                margin-top:300px;
+                transition:1s;
+                .flex-options();
+                background-color: @second-color;
+
+                &:hover{
+                    margin-left:0px;
+                }
+
+                a{
+                    display:block;
+                    margin:10px auto; 
+                    width: 50px;
+                    height: 50px; 
+                    .admin-settings-img{
+                        width: 100%;
+                        transition:.5s;
+
+                        &:hover{
+                            
+                            transform: scale(1.2);
+                        }
+                    } 
+                }
+                .move{
+                    width: 20px;
+                    height: 70px;
+                    vertical-align: middle;
+                    line-height: 70px;
+                    font-size:30px;
+                    text-indent:2px;
+                    color:@second-color;
+                    background-color:@main-color;
+                    cursor:pointer;
+                }
+               
+            }
+
+
             .container{
                 padding:35px 43px 75px;
                 .flexbox();

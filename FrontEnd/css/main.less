@@ -126,7 +126,7 @@ body{
                 margin-top:300px;
                 transition:1s;
                 .flex-options();
-                background-color: @second-color;
+                background-color:@main-color;
 
                 &:hover{
                     margin-left:0px;
@@ -134,11 +134,13 @@ body{
 
                 a{
                     display:block;
-                    margin:10px auto; 
-                    width: 50px;
-                    height: 50px; 
+                    
+                    width: 70px;
+                    height: 70px; 
+                    background-color:@second-color;
                     .admin-settings-img{
-                        width: 100%;
+                        margin:10px 10px; 
+                        width: 50px;
                         transition:.5s;
 
                         &:hover{
@@ -149,14 +151,19 @@ body{
                 }
                 .move{
                     width: 20px;
-                    height: 70px;
+                    height: 110%;
                     vertical-align: middle;
                     line-height: 70px;
                     font-size:30px;
                     text-indent:2px;
                     color:@second-color;
-                    background-color:@main-color;
-                    cursor:pointer;
+                    
+                    //border-radius:11px;
+                    
+
+                    &:hover{
+                        cursor:pointer;
+                    }
                 }
                
             }

@@ -1,0 +1,64 @@
+<app-header></app-header>
+<main>
+    <div class="container">
+        <h2 class="main-title">Налаштування системи</h2>
+        <div class="main-box">
+            <form class="form">
+                <div class="left">
+                    <section class="individual criteria-box">
+                        <h3>Критерії оцінки</h3>
+                        <ul class="individual-criteria-list criteria-list">
+
+                            <li class="criteria" *ngFor="let crit of criterias">
+                                <span class="criteria-name">{{crit.name}}</span>
+                                <label class="switch">
+                                    <input type="checkbox" [checked]="crit.isEnabled">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+
+                        </ul>
+                        <div class="bottom">
+                            <span class="active">Активні критерії: відсоток виконання продаж</span>
+                        </div>
+                    </section>
+                    <section class="group criteria-box">
+                        <h3>Додати новий критерій</h3>
+                        <label for="new-criteria">Назва:
+                            <input type="text"class="new-criteria" name="new-criteria" [(ngModel)]="criteria.name">
+                        </label>
+                        <label for="new-criteria">Абревіатура:
+                            <input type="text"class="new-criteria" name="new-criteria"
+                                [(ngModel)]="criteria.abbreviation">
+                        </label>
+                        <button class="add" (click)="addCriteria(criteria)">Додати</button>
+                    </section>
+                </div>
+                <div class="right">
+                    <section class="options">
+                        <h3 class=title>Розрахунок оцінки</h3>
+                        <div class="criteria-titles"><span>Критерій</span><span>Позначення</span></div>
+                        <ul class="group-criteria-list criteria-list">
+                            <ng-container *ngFor="let crit of criterias">
+                                <li class="criteria" *ngIf="crit.isEnabled">
+                                    <span class="criteria-name">{{crit.name}}</span>
+                                    <input type="text" class="criteria-abbreviation" value = {{crit.abbreviation}}>
+                                </li>
+                            </ng-container>
+                        </ul>
+                        <div class="formula">
+                            <h4 class="formula-title">Формула індивідуальної оцінки</h4>
+                            <input type="text" class="formula-calculation" [(ngModel)] = "formula">
+                        </div>
+                        <div class="formula">
+                            <h4 class="formula-title">Формула групової оцінки</h4>
+                            <input type="text" class="formula-calculation">
+                        </div>
+                        <input type="submit" id="submit" value="Підтвердити" (click) = "sendFormula">
+
+                    </section>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

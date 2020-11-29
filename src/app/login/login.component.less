@@ -1,0 +1,110 @@
+@main-color:#8CCA19;
+@main-font:"Arial", sans-serif;
+@second-color:#FFF;
+@active-btn-color:#2CB0CD;
+@border-color:#6A6868;
+
+*{
+    padding:0;
+    margin:0;
+    font-family:@main-font;
+    box-sizing: border-box;
+}
+
+.font(@style, @weight, @size, @height ){
+    font-style: @style;
+    font-weight: @weight;
+    font-size: @size;
+    line-height: @height;
+}
+
+.flex-column(){
+    display:flex;
+    flex-direction: column;
+}
+
+main{
+    width:100%;
+    height:92vh;
+    background-color:@main-color;
+    .flex-column();
+
+    .container{
+        .flex-column();
+        margin:auto;
+
+            .auth{ 
+                margin-top:40px;              
+                width: 437px;
+                height: 359px;
+                background-color: @second-color;
+                border-radius: 11px;
+                .flex-column();
+                flex-wrap: nowrap;
+
+                &-title{
+                    margin-top:27px;
+                    margin-left: 31px;
+                    .font(normal, normal, 30px, 34px);
+                    color:#000;
+                }
+
+                &-login,
+                &-password{
+                    margin:18px auto 0;
+                    width: 324px;
+                    height: 46.14px;
+                    border-radius: 15px;
+                    border: 1px solid @border-color;
+                    text-indent: 10px;
+
+                    &:focus{
+                        outline:none;
+                        border: 2px solid @main-color;
+                    }
+                }
+
+                label{
+                    margin:18px auto 0;
+                    .font(normal, normal, 16px, 18px);
+                    align-items:center;
+
+                    #checkbox{
+                        margin-right:5px;
+                    }
+                }
+            }
+
+            .copyright{
+                margin-top:20px;
+                text-align: center;
+                color:@second-color;
+                .font(normal, normal, 18px, 21px);
+            }
+
+            #signIn{
+                width: 168px;
+                height: 46.14px;
+                background-color: @main-color;
+                border:none;
+                border-radius: 13px;
+                color:@second-color;
+                margin:22px auto;
+                .font(normal, normal, 20px, 22px);
+
+                &:hover{
+                    background-color: @active-btn-color;
+                    outline:none;
+                }
+
+                &:focus{
+                    outline:none;
+                }
+
+                &:active{
+                    box-shadow:inset 0 0 5px rgba(0,0,0,0.5);
+                }
+            }
+    }
+    
+}

@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 50px;
+  background: #8CCA19;
+  border-radius: 0px 0px 35px 35px;
+}
+header .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 43px;
+}
+header .container .logo {
+  width: 138px;
+  height: 27px;
+}
+header .container .search {
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .search .search-input {
+  border: none;
+  background-color: inherit;
+  color: #FFF;
+  box-sizing: content-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  width: 180px;
+}
+header .container .search .search-input::-moz-placeholder {
+  color: #FFF;
+}
+header .container .search .search-input::-webkit-input-placeholder {
+  color: #FFF;
+}
+header .container .search .search-input:focus {
+  border-bottom: 2px solid #FFF;
+  margin-bottom: -2px;
+  outline: none;
+}
+header .container .search .search-logo {
+  content: " ";
+  width: 24px;
+  height: 24px;
+}
+header .container .client {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+header .container .client-name {
+  color: #FFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+header .container .client-name:before {
+  display: inline-block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background-color: #FFF;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header .container .client-photo {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-image: url(../../assets/img/user.svg);
+  background-repeat: no-repeat;
+  margin-left: 15px;
+}

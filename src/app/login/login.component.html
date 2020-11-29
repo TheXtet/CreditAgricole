@@ -1,0 +1,15 @@
+<main>
+    <div class="container">
+        <img src="../../assets/img/Logo.svg" alt="Logo" class="logo">
+        <form action="" class="auth">
+            <h2 class="auth-title">Авторизація</h2>
+            <input [(ngModel)]="loginUserData.email" name="login" type="text" class="auth-login" placeholder="Логін">
+            <input [(ngModel)]="loginUserData.password" name="password" type="password" class="auth-password"
+                placeholder="Пароль">
+            <label><input type="checkbox" id="checkbox">Запам’ятати мене на цьому комп’ютері</label>
+            <input (click)="loginUser()" type="button" value="Увійти" id="signIn">
+        </form>
+        <span class="copyright">ⓒ 1993-2020 “Crédit Agricole Ukraine”</span>
+    </div>
+    <script src="js/main.js"></script>
+</main>

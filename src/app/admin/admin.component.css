@@ -1,0 +1,335 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+main {
+  width: 100%;
+}
+main .container {
+  width: 100%;
+  padding: 0 43px;
+}
+main .container .main-title {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 40px;
+}
+main .container .main-box {
+  width: 100%;
+}
+main .container .main-box form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .container .main-box form .left {
+  width: 48%;
+}
+main .container .main-box form .left .criteria-box {
+  margin-top: 25px;
+  min-width: 537px;
+  min-height: 150px;
+  padding: 24px 23px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+}
+main .container .main-box form .left .criteria-box h3 {
+  text-align: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria {
+  list-style: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #6A6868;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .switch input {
+  display: none;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria input:checked + .slider {
+  background-color: #2196F3;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .slider.round {
+  border-radius: 34px;
+}
+main .container .main-box form .left .criteria-box .criteria-list .criteria .slider.round:before {
+  border-radius: 50%;
+}
+main .container .main-box form .left .criteria-box .bottom {
+  margin-top: 45px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .main-box form .left .criteria-box .bottom .active {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+}
+main .container .main-box form .left .group {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main .container .main-box form .left .group label {
+  margin-top: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+main .container .main-box form .left .group label .new-criteria {
+  margin-top: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  border: none;
+  text-align: center;
+  height: 38px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  min-width: 100%;
+  width: 480px;
+}
+main .container .main-box form .left .group label .new-criteria:active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+main .container .main-box form .left .group label .new-criteria:focus {
+  outline: none;
+}
+main .container .main-box form .left .group .add {
+  background-color: #8CCA19;
+  border: none;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 150px;
+  height: 38px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 0;
+  color: #FFF;
+  text-indent: 35px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 25px;
+}
+main .container .main-box form .left .group .add:hover {
+  outline: none;
+  background-color: #2CB0CD;
+  cursor: pointer;
+}
+main .container .main-box form .left .group .add:active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+main .container .main-box form .left .group .add:focus {
+  outline: none;
+}
+main .container .main-box form .right {
+  margin-top: 25px;
+  min-width: 537px;
+  min-height: 150px;
+  padding: 24px 23px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+main .container .main-box form .right .options .title {
+  text-align: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+}
+main .container .main-box form .right .options .criteria-titles {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8CCA19;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 25px;
+  margin-top: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
+main .container .main-box form .right .options .criteria-list .criteria {
+  list-style: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #6A6868;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .main-box form .right .options .criteria-list .criteria .criteria-abbreviation {
+  width: 119px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  border: none;
+  text-align: center;
+  height: 38px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+main .container .main-box form .right .options .criteria-list .criteria .criteria-abbreviation:focus {
+  outline: none;
+}
+main .container .main-box form .right .options .formula {
+  margin-top: 25px;
+  width: 100%;
+}
+main .container .main-box form .right .options .formula-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 25px;
+  color: #8CCA19;
+}
+main .container .main-box form .right .options .formula-calculation {
+  width: 100%;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  border: none;
+  text-align: center;
+  height: 38px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+main .container .main-box form .right .options .formula-calculation:focus {
+  outline: none;
+}
+main .container .main-box form .right .options #submit {
+  background-color: #8CCA19;
+  border: none;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 238px;
+  height: 38px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 0;
+  color: #FFF;
+  text-indent: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 25px;
+}
+main .container .main-box form .right .options #submit:hover {
+  outline: none;
+  background-color: #2CB0CD;
+  cursor: pointer;
+}
+main .container .main-box form .right .options #submit:active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+main .container .main-box form .right .options #submit:focus {
+  outline: none;
+}

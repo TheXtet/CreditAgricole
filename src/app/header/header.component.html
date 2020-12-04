@@ -1,4 +1,3 @@
-<!--<header *ngIf="isLoggedIn | async">-->
 <header>
     <div class="container">
         <a href="#" routerLink="/user-profile"><img src="../../assets/img/Logo.svg" alt="Logo" class="logo"></a>
@@ -8,8 +7,8 @@
         </div>
 
         <div class="client">
-            <span class="client-name">Марія Шевченко</span>
-            <div class="client-photo"></div>
+            <span class="client-name">{{currentUser.name + ' ' + currentUser.surName}}</span>
+            <img class="client-photo" src="data:image/jpeg;base64,{{currentUser.profileImage}}">
         </div>
     </div>
 </header>

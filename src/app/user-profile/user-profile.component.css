@@ -81,12 +81,12 @@ main .monitoring .container .managers-recent,
 main .monitoring .container .managers-now {
   width: 100%;
   min-width: 315px;
-  min-height: 350px;
+  min-height: 365px;
   padding-top: 5%;
 }
 main .monitoring .container .managers-recent .list,
 main .monitoring .container .managers-now .list {
-  margin: 25px /*10%*/ 25px 0;
+  margin: 25px 25px 0;
 }
 main .monitoring .container .managers-recent .list li:not(:first-of-type),
 main .monitoring .container .managers-now .list li:not(:first-of-type) {
@@ -112,16 +112,18 @@ main .monitoring .container .managers-now .list li {
   align-items: center;
   justify-content: space-between;
 }
-main .monitoring .container .managers-recent .list li:after,
-main .monitoring .container .managers-now .list li:after {
+main .monitoring .container .managers-recent .list li img,
+main .monitoring .container .managers-now .list li img {
   content: " ";
   display: inline-block;
   vertical-align: middle;
   width: 44px;
   height: 44px;
   margin-right: 0;
-  background-image: url(../../assets/img/user.svg);
-  background-position: center;
+}
+main .monitoring .container .managers-recent .list li:hover,
+main .monitoring .container .managers-now .list li:hover {
+  cursor: pointer;
 }
 main .monitoring .container .managers-now {
   margin-top: 25px;
@@ -152,8 +154,8 @@ main .monitoring .container .user-achieves-top .user-current {
 main .monitoring .container .user-achieves-top .user-current .photo {
   width: 151px;
   height: 151px;
-  background-image: url(../../assets/img/user.svg);
   background-repeat: no-repeat;
+  border-radius: 100%;
 }
 main .monitoring .container .user-achieves-top .user-current-info {
   margin-left: 30px;
@@ -205,7 +207,6 @@ main .monitoring .container .user-achieves .user-statistic {
   margin-top: 30px;
   min-width: 900px;
   min-height: 545px;
-  height: 70%;
   width: 100%;
   padding: 30px 72px;
 }
@@ -220,7 +221,6 @@ main .monitoring .container .user-achieves .user-statistic-title {
 }
 main .monitoring .container .user-achieves .user-statistic .charts {
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -232,12 +232,14 @@ main .monitoring .container .user-achieves .user-statistic .charts {
   position: relative;
 }
 main .monitoring .container .user-achieves .user-statistic .charts app-chart {
+  margin-top: 150px;
   margin-left: -150px;
   width: 70%;
 }
 main .monitoring .container .user-achieves .user-statistic .charts .criterias {
   height: 50%;
-  margin-right: 150px;
+  margin-top: 100px;
+  margin-right: 50px;
 }
 main .monitoring .container .user-achieves .user-statistic .charts .criterias-header {
   font-style: normal;

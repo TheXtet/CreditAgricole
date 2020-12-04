@@ -90,7 +90,6 @@ header .container .client-photo {
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  background-image: url(../../assets/img/user.svg);
   background-repeat: no-repeat;
   margin-left: 15px;
 }

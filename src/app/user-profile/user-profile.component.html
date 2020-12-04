@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main>
     <section class="monitoring">
-        <div class="admin-settings">
+        <div *ngIf="loggedUser.isAdmin" class="admin-settings">
             <a href="#" routerLink="/adminPanel">
                 <img src="../../assets/img/settings.svg" alt="settings" class="admin-settings-img">
             </a>
@@ -11,32 +11,24 @@
             <div class="managers">
                 <div class="managers-recent block">
                     <h3 class="managers-recent-header m-header">Топ менеджерів за 3 квартал</h3>
-                    <ul class="managers-recent-list list">
-                        <li>1.Кривицький Дмитро </li>
-                        <li>2.Пономаренко Марина </li>
-                        <li>3.Іванов Микола </li>
-                        <li>4.Жук Інна </li>
-                        <li>5.Коваленко Жанна </li>
-                    </ul>
+                    <ol class="managers-recent-list list">
+                        <li *ngFor = "let user of users" (click)='lookUser(user)'>{{user.name + ' ' + user.surName}}<img src="data:image/jpeg;base64,{{user.profileImage}}"></li>
+                    </ol>
                 </div>
                 <div class="managers-now block">
                     <h3 class="managers-now-header m-header">Топ менеджерів за поточний квартал</h3>
-                    <ul class="managers-recent-list list">
-                        <li>1.Петрова Валерія </li>
-                        <li>2.Кривицький Дмитро </li>
-                        <li>3.Цехмістренко Лев </li>
-                        <li>4.Пономаренко Марина</li>
-                        <li>5.Павлюк Іван </li>
-                    </ul>
+                    <ol class="managers-recent-list list">
+                        <li *ngFor = "let user of users" (click)='lookUser(user)'>{{user.name + ' ' + user.surName}}<img src="data:image/jpeg;base64,{{user.profileImage}}"></li>
+                    </ol>
                 </div>
             </div>
             <div class="user-achieves">
                 <div class="user-achieves-top">
                     <div class="user-current">
-                        <div class="photo"></div>
+                        <img class="photo" src="data:image/jpeg;base64,{{currentUser.profileImage}}">
                         <div class="user-current-info">
-                            <h2 class='name'>Марія Шевченко</h2>
-                            <span class="position">менеджер IT-департаменту</span>
+                            <h2 class='name'>{{currentUser.name + ' ' + currentUser.surName}}</h2>
+                            <span class="position">{{currentUser.position}}</span>
                         </div>
                     </div>
                     <div class="user-percent block">
@@ -53,13 +45,14 @@
                         <div class="criterias">
                             <h1 class="criterias-header">Поточні критерії</h1>
                             <ul class="criterias-list">
-                                <li class="criterias-list-element"><span>Критерій 1</span></li>
-                                <li class="criterias-list-element"><span>Критерій 2</span></li>
-                                <li class="criterias-list-element"><span>Критерій 3</span></li>
+                                <ng-container *ngFor="let criteria of criterias">
+                                    <li class="criterias-list-element" *ngIf="criteria.isEnabled">
+                                        <span>{{criteria.name}}</span></li>
+                                </ng-container>
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>

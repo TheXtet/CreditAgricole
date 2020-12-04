@@ -23,9 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    console.log(this.loginUserData); 
-    this._auth.loginUser();
-    this._router.navigate(['/userProfile']);
+    //console.log(this.loginUserData); 
+    this._auth.loginUser(this.loginUserData.email, this.loginUserData.password);
+    //this._router.navigate(['/userProfile']);
     /*this._auth.loginUser(this.loginUserData)
       .subscribe(
         res => console.log(res),

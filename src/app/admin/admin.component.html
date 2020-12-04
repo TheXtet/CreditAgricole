@@ -12,15 +12,12 @@
                             <li class="criteria" *ngFor="let crit of criterias">
                                 <span class="criteria-name">{{crit.name}}</span>
                                 <label class="switch">
-                                    <input type="checkbox" [checked]="crit.isEnabled">
+                                    <input type="checkbox" [checked]="crit.isEnabled" (click)="updateCriteria(crit)">
                                     <span class="slider round"></span>
                                 </label>
                             </li>
 
                         </ul>
-                        <div class="bottom">
-                            <span class="active">Активні критерії: відсоток виконання продаж</span>
-                        </div>
                     </section>
                     <section class="group criteria-box">
                         <h3>Додати новий критерій</h3>
@@ -48,13 +45,13 @@
                         </ul>
                         <div class="formula">
                             <h4 class="formula-title">Формула індивідуальної оцінки</h4>
-                            <input type="text" class="formula-calculation" [(ngModel)] = "formula">
+                            <input type="text" class="formula-calculation" [(ngModel)] = "formula"  [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="formula">
                             <h4 class="formula-title">Формула групової оцінки</h4>
                             <input type="text" class="formula-calculation">
                         </div>
-                        <input type="submit" id="submit" value="Підтвердити" (click) = "sendFormula">
+                        <input type="submit" id="submit" value="Підтвердити" (click) = "sendFormula()">
 
                     </section>
                 </div>
